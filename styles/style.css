@@ -45,6 +45,8 @@ body {
     list-style: none;
     border: 2px solid #000;
     border-radius: 5px;
+    
+    
 }
 
 .button[data-key="clear"] {
@@ -59,6 +61,13 @@ body {
     color: #FFF;
     font-weight: bold;
     font-size: 18px;
+    box-shadow: 0 3px rgba(0, 0, 0, 0.5); 
+    cursor: pointer; 
+    z-index: 100;
+}
+
+.button:active {
+    box-shadow: none;
 }
 
 .button.operand {
