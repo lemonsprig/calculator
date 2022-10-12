@@ -1,3 +1,11 @@
+let operand = 0;
+let  = "";
+
+buttons = document.querySelectorAll(".button");
+display = document.querySelector(".display");
+
+display.textContent="";
+
 function operate(operator, num1, num2) {
     switch(operator) {
         case "add":
@@ -16,7 +24,18 @@ function operate(operator, num1, num2) {
     }
 }
 
-console.log(operate("add", 2, 3));
-console.log(operate("subtract", 10, 3));
-console.log(operate("multiply", 5, 5));
-console.log(operate("divide", 100, 2));
+function updateDisplay(e) {
+    if (display.textContent.length < 20) {
+        if(e.type == "keydown") {
+            console.log ("keydown")
+            display.textContent += e.key
+        } else {
+            console.log("click")
+            display.textContent += this.value
+        }
+    }
+}
+
+
+buttons.forEach(button => button.addEventListener("click", updateDisplay));
+window.addEventListener("keydown", updateDisplay);
