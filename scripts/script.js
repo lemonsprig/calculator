@@ -25,12 +25,12 @@ function operate(operator, num1, num2) {
 }
 
 function updateDisplay(e) {
-    if (display.textContent.length < 20) {
+    if(display.textContent.length < 20) {
         if(e.type == "keydown") {
-            console.log ("keydown")
-            display.textContent += e.key
+            if(e.key.match(/[0-9]/)) {
+                display.textContent += e.key
+            }
         } else {
-            console.log("click")
             display.textContent += this.value
         }
     }
