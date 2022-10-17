@@ -23,19 +23,33 @@ body {
     background-color: #414141;
 }
 
-.display {
+.display-wrapper {
     display: flex;
-    justify-content:  end;
-    align-items: center;
+    justify-content: space-between;
     border: 2px solid black;
     margin: 10px;
     margin-top: 20px;
-    height: 50px;
+    height: 60px;
     background-color: #FFF;
     font-size: 18px;
     font-weight: bold;
-    padding: 0 10px;
     font-family: monospace;
+}
+
+.display-operator {
+    display: flex;
+    color: red;
+    width: 10%;
+    align-items: center;
+    justify-content: center;
+}
+
+.display-value {
+    width: 90%;
+    display: flex;
+    justify-content:  end;
+    align-items: center;
+    padding: 0 10px;
 }
 
 .buttons-grid {
@@ -56,8 +70,13 @@ body {
     
 }
 
-.button[data-key="clear"] {
-    grid-column: 1 / 4;
+.button[data-clear="clear"] {
+    grid-column: 1 / 3;
+    background-color: salmon;
+}
+
+.button[data-delete="delete"] {
+    background-color: salmon;
 }
 
 .button {
@@ -68,9 +87,11 @@ body {
     color: #FFF;
     font-weight: bold;
     font-size: 18px;
-    box-shadow: 0 3px rgba(0, 0, 0, 0.5); 
+    box-shadow: 0 3px rgba(0, 0, 0, 0.5);
     cursor: pointer; 
     z-index: 100;
+    user-select: none;
+    
 }
 
 .button:active {
@@ -78,10 +99,29 @@ body {
     transform: scale(0.95);
 }
 
-.button.operand {
+.button.operator {
     background-color: cornflowerblue;
 }
 
 .button.equals {
     background-color: olive;
+}
+
+.error {
+    animation: fadeIn 4s;
+    background-color: salmon;
+    width:100%;
+    justify-content: center;
+    
+}
+
+.hide {
+    background-color: blue;
+    width: 0;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    50% {opacity: 1}
+    100% {opacity: 0;}
 }

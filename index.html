@@ -11,29 +11,32 @@
 <body>
 
     <div class="calculator">
-        <div class="display">
-        </div>
+        <div class="display-wrapper">
+            <div class="display-operator"></div>
+            <div class="display-value"></div>
+        </div>  
         <ul class="buttons-grid">
-            <li class="button" value="clear" data-key="clear">clear</li>
-            <li class="button operand" data-key="+">+</li>
-            <li class="button" value="1" data-key="1">1</li>
-            <li class="button" value="2" data-key="2">2</li>
-            <li class="button" value="3" data-key="3">3</li>
-            <li class="button operand" data-key="-">-</li>
-            <li class="button" value="4" data-key="4">4</li>
-            <li class="button" value="5" data-key="5">5</li>
-            <li class="button" value="6" data-key="6">6</li>
-            <li class="button operand" data-key="*">*</li>
-            <li class="button" value="7" data-key="7">7</li>
-            <li class="button" value="8" data-key="8">8</li>
-            <li class="button" value="9" data-key="9">9</li>
-            <li class="button operand" data-key="/">/</li>
-            <li class="button operand" data-key="+-">+ -</li>
-            <li class="button" value="0" data-key="0">0</li>
-            <li class="button" value="." data-key=".">.</li>
-            <li class="button equals" data-key="1">=</li>
+            <li class="button" data-clear="clear">clear</li>
+            <li class="button" data-delete="delete">del</li>
+            <li class="button operator" data-operator="+">+</li>
+            <li class="button" data-number="1">1</li>
+            <li class="button" data-number="2">2</li>
+            <li class="button" data-number="3">3</li>
+            <li class="button operator" data-operator="-">-</li>
+            <li class="button" data-number="4">4</li>
+            <li class="button" data-number="5">5</li>
+            <li class="button" data-number="6">6</li>
+            <li class="button operator" data-operator="*">*</li>
+            <li class="button" data-number="7">7</li>
+            <li class="button" data-number="8">8</li>
+            <li class="button" data-number="9">9</li>
+            <li class="button operator" data-operator="/">/</li>
+            <li class="button operator" data-sign="+-">+ -</li>
+            <li class="button" data-number="0">0</li>
+            <li class="button" data-number=".">.</li>
+            <li class="button equals" data-equals="=">=</li>
         </ul>        
     </div>
     
 </body>
-</html> 
+</html>
